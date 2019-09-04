@@ -2,21 +2,23 @@ import React from 'react';
 import {Card, Icon, Image} from 'semantic-ui-react';
 
 
-const UserCard = (props)=>(
-
+const UserCard= () => (
+  
 <Card>
-  <Image src={props.userData.avatar_url}/>
+  <Image src={this.props.followers.avatar_url}/>
   <Card.Content>
-     <Card.Header>{props.userData.login}</Card.Header>
-     <Card.Description>Location: {props.userData.location || "Unknown"}</Card.Description>
+     <Card.Header>{this.props.followers.login}</Card.Header>
+     {/* <Card.Description>Location: {this.props.location || "Unknown"}</Card.Description> */}
     </Card.Content>
     <Card.Content extra>
     <a>
       <Icon name="user"/>
-      {props.userData.followers} Followers
+      {/* {this.props.followers} Followers */}
     </a>
   </Card.Content>
+
 </Card>
+   
 )
 
 export default UserCard;
